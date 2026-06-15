@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cloud Bus Pass System | CodeAlpha</title>
+  <meta name="description" content="Cloud-based Bus Pass System for students. Register and generate a digital bus pass instantly." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">
+      <span class="logo-icon">🚌</span>
+      <span>CloudPass</span>
+    </div>
+    <span class="badge">CodeAlpha · Cloud Computing</span>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Cloud-Based <span class="gradient-text">Bus Pass</span> System</h1>
+      <p>Register as a student and instantly generate your digital bus pass — accessible anywhere on the cloud.</p>
+    </section>
+
+    <section class="card form-card" id="formSection">
+      <h2>Student Registration</h2>
+      <form id="passForm" novalidate>
+        <div class="grid">
+          <div class="field">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" required placeholder="John Doe" />
+          </div>
+          <div class="field">
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" required />
+          </div>
+          <div class="field">
+            <label for="gender">Gender</label>
+            <select id="gender" required>
+              <option value="">Select</option>
+              <option>Male</option>
+              <option>Female</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" required placeholder="+91 9876543210" />
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" required placeholder="student@example.com" />
+          </div>
+          <div class="field">
+            <label for="college">College / Institution</label>
+            <input type="text" id="college" required placeholder="ABC University" />
+          </div>
+          <div class="field">
+            <label for="course">Course</label>
+            <input type="text" id="course" required placeholder="B.Tech CSE" />
+          </div>
+          <div class="field">
+            <label for="route">Bus Route</label>
+            <select id="route" required>
+              <option value="">Select Route</option>
+              <option>Route 1 - City Center</option>
+              <option>Route 2 - North Campus</option>
+              <option>Route 3 - South Hills</option>
+              <option>Route 4 - Airport Line</option>
+              <option>Route 5 - Tech Park</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="address">Address</label>
+            <input type="text" id="address" required placeholder="123 Street, City" />
+          </div>
+          <div class="field">
+            <label for="validity">Validity (Months)</label>
+            <select id="validity" required>
+              <option value="3">3 Months</option>
+              <option value="6" selected>6 Months</option>
+              <option value="12">12 Months</option>
+            </select>
+          </div>
+        </div>
+        <button type="submit" class="btn-primary">Generate Bus Pass</button>
+      </form>
+    </section>
+
+    <section class="card pass-section hidden" id="passSection">
+      <div class="pass-card" id="passCard">
+        <div class="pass-header">
+          <div>
+            <h3>🚌 CloudPass</h3>
+            <small>Official Student Bus Pass</small>
+          </div>
+          <div class="pass-no">
+            <small>Pass No.</small>
+            <strong id="passNo">—</strong>
+          </div>
+        </div>
+        <div class="pass-body">
+          <div class="avatar" id="avatar">JD</div>
+          <div class="pass-details">
+            <p><span>Name</span><strong id="pName">—</strong></p>
+            <p><span>Course</span><strong id="pCourse">—</strong></p>
+            <p><span>College</span><strong id="pCollege">—</strong></p>
+            <p><span>Route</span><strong id="pRoute">—</strong></p>
+            <p><span>Phone</span><strong id="pPhone">—</strong></p>
+            <p><span>Issued</span><strong id="pIssued">—</strong></p>
+            <p><span>Valid Until</span><strong id="pValid">—</strong></p>
+          </div>
+        </div>
+        <div class="pass-footer">
+          <span>Authorized signature required · Non-transferable</span>
+          <span class="qr">▦</span>
+        </div>
+      </div>
+
+      <div class="actions no-print">
+        <button class="btn-secondary" id="printBtn">🖨 Print Pass</button>
+        <button class="btn-secondary" id="downloadBtn">⬇ Download</button>
+        <button class="btn-ghost" id="newBtn">+ New Pass</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 CloudPass · Built for CodeAlpha Cloud Computing Internship</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
